@@ -5,7 +5,6 @@ if (sprite_exists(global.tilemap))
 	
 } else {
 	picked_sp = Sp_Tiles
-	
 }
 
 
@@ -23,7 +22,7 @@ if (was_clicked)
 		for (var j = 0; j < 14; j++)
 		{
 			spc = GetXYFromIndex(ds_grid_get(meta_grid,i,j))
-			draw_sprite_part_ext(global.tilemap,0,spc.x,spc.y,8,8,i*16,j*16,2,2,c_white,1)
+			draw_sprite_part_ext(picked_sp,0,spc.x,spc.y,8,8,i*16,j*16,2,2,c_white,1)
 		}
 	}
 	surface_reset_target()
